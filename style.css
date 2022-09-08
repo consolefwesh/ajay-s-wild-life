@@ -1,0 +1,143 @@
+ @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,500;1,400&display=swap');
+ * {
+     padding: 0;
+     margin: 0;
+ }
+ 
+ body {
+     background-color: black;
+ }
+ 
+ .general-container {
+     height: 100vh;
+     font-family: 'Arimo', sans-serif;
+     display: grid;
+     grid-template-columns: 2fr 1fr 1fr 1fr;
+ }
+ 
+ i {
+     display: none;
+ }
+ 
+ section {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+ 
+ .home {
+     padding: 17px;
+     background-color: #203940;
+     color: white;
+ }
+ 
+ nav ul {
+     display: flex;
+     gap: 35px;
+ }
+ 
+ nav a {
+     text-decoration: none;
+     color: white;
+     font-weight: 600;
+     font-size: 1.2rem;
+ }
+ 
+ ul li {
+     list-style: none;
+ }
+ 
+ .align-container {
+     display: flex;
+     align-items: center;
+ }
+ 
+ .intro {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 15px;
+ }
+ 
+ .intro h1 {
+     font-size: 2.3rem;
+ }
+ 
+ .intro img {
+     width: 150px;
+     height: 150px;
+     object-fit: cover;
+     border-radius: 10px;
+ }
+ 
+ .links {
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .links a {
+     color: white;
+     text-decoration: none;
+ }
+ 
+ .category {
+     background-size: cover;
+     position: relative;
+ }
+ 
+ .category div {
+     color: white;
+     height: 200px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: .8rem;
+     position: absolute;
+     width: 100%;
+     bottom: 0;
+ }
+ 
+ .wildlife {
+     background-image: url(https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+ }
+ 
+ .wildlife div {
+     background-color: #8FA163;
+ }
+ 
+ .bird {
+     background-image: url(https://images.unsplash.com/photo-1630159910457-9be84ba6b816?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHJlZCUyMHBhcnJvdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60);
+ }
+ 
+ .bird div {
+     background-color: #E8766B;
+ }
+ 
+ .landscape {
+     background-image: url(https://media.istockphoto.com/photos/sunset-on-mount-everest-picture-id155154584?k=20&m=155154584&s=612x612&w=0&h=XV-80OE-D3k2Txh-eqT1eKPQ6c-ifVP11nMl0sK_iFA=);
+ }
+ 
+ .landscape div {
+     background-color: #6F9CA2;
+ }
+ 
+ @media(max-width:1200px) {
+     .general-container {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(2, 100vh);
+     }
+ }
+ 
+ @media(max-width:768px) {
+     .general-container {
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(4, 100vh);
+         gap: 10px;
+     }
+     .nav-links {
+         display: none;
+     }
+     i {
+         display: block;
+     }
+ }
